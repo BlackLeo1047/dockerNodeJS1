@@ -32,7 +32,7 @@ app.get("/api/products", async (req, res) => {
 
         const result = await pool
             .request()
-            .query("SELECT top 1 * FROM dbo.product");
+            .query("SELECT top 3 * FROM dbo.product");
 
         res.json(result.recordset);
 
